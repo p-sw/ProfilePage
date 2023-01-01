@@ -5,8 +5,10 @@ import { useRouter } from 'next/router'
 
 function makeLink(router, {href, img, alt}) {
     return <Link href={href} className={ router.pathname === href ? styles.active : "" }>
-        <Image src={img} alt={alt} width={30} height={30} />
-        <span>{alt}</span>
+        <div>
+            <Image src={img} alt={alt} width={30} height={30} />
+            <span>{alt}</span>
+        </div>
     </Link>
 }
 
@@ -49,7 +51,6 @@ export default function Navigation() {
             <ul>
                 {links.map(link => <li key={link.href}>{makeLink(router, link)}</li>)}
             </ul>
-            <div className={styles.indicator} data-goto={FindLinkIndex(router)}></div>
         </nav>
     </div>
 }

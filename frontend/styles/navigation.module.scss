@@ -1,4 +1,4 @@
-$nav-lower-px: 40px;
+$nav-lower-px: 50px;
 
 .nav_container {
   display: flex;
@@ -16,6 +16,8 @@ $nav-lower-px: 40px;
   box-sizing: border-box;
 
   nav {
+    position: relative;
+
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -62,6 +64,20 @@ $nav-lower-px: 40px;
           align-items: center;
           justify-content: center;
 
+          div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            width: fit-content;
+            height: fit-content;
+
+            padding: 10px;
+
+            border-radius: 50%;
+          }
+
           span {
             position: absolute;
 
@@ -75,54 +91,57 @@ $nav-lower-px: 40px;
           }
 
           &.active {
+            div {
+              background-color: var(--color-secondary);
+            }
+          }
+
+          @media (hover: hover) {
+            &:hover {
+              img {
+                transform: translateY($nav-lower-px);
+
+                transition: 0.2s;
+              }
+
+              span {
+                opacity: 1;
+
+                transition: 0.3s;
+              }
+            }
+          }
+
+          @media (hover: none) {
+            img {
+              transform: scale(1.1);
+
+              opacity: 0;
+
+              transition: 0.3s;
+            }
+
             span {
               opacity: 1;
 
               transition: 0.3s;
             }
 
-            img {
-              transform: translateY($nav-lower-px);
+            &.active {
+              img {
+                opacity: 1;
 
-              transition: 0.2s;
+                transition: 0.3s;
+              }
+
+              span {
+                opacity: 0;
+
+                transition: 0.3s;
+              }
             }
           }
         }
-      }
-    }
-
-    div.indicator {
-      position: relative;
-
-      width: 60px;
-      height: 60px;
-
-      border-radius: 50%;
-
-      background-color: var(--color-secondary);
-
-      box-shadow: var(--color-secondary-shadow);
-
-      transition: 0.3s;
-
-      --total-items: 4;
-      /*
-        Calculating the width of the navigation
-        When the navigation's width is minimum:
-        <nav> padding 30px;
-        <ul> gap 30px;
-        <li> width 30px;
-       */
-
-      @mixin calculate-indicator-position($index) {
-        &[data-goto="#{$index}"] {
-          transform: translateX(calc((max(40vw, calc(60px + (var(--total-items) * 2 - 1) * 30px)) - 60) / (2*var(--total-items) - 1) * 30px*($index + 1)));
-          transition: 0.3s;
-        }
-      }
-
-      @for $i from 0 through 3 {
-          @include calculate-indicator-position($i);
       }
     }
   }
