@@ -79,6 +79,9 @@ $nav-lower-px: 50px;
           }
 
           span {
+            font-family: var(--font-family);
+            font-weight: 700;
+
             position: absolute;
 
             opacity: 0;
