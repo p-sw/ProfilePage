@@ -10,6 +10,8 @@ RUN npm install
 # Bundle app source
 COPY ./frontend .
 
+RUN chmod +x ./docker-entrypoint.sh
+
 EXPOSE 5000
 
-ENTRYPOINT ["npm", "run", "start"]
+ENTRYPOINT ["./docker-entrypoint.sh"]
