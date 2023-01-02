@@ -8,7 +8,7 @@ COPY ./frontend/package*.json ./
 RUN npm install
 
 # Bundle app source
-COPY ./frontend .
+COPY ./frontend /app
 
 RUN chmod +x /app/docker-entrypoint.sh
 
