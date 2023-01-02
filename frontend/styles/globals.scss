@@ -1,25 +1,26 @@
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css");
-
-:root {
-  --color-primary: #fff;
-  --color-invert-primary: #000;
-  --color-primary-shadow: 0 0 12px 2px #00000077;
-  --color-secondary: #e6d1f2;
-  --color-invert-secondary: #fff;
-  --color-secondary-shadow: 0 0 20px 10px #e6d1f277;
-  --font-family: "Pretendard Variable", Pretendard, -apple-system,
-  BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue",
-  "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR",
-  "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji",
-  "Segoe UI Symbol", sans-serif;
-}
+@import "./variables.module";
 
 html,body {
   margin: 0;
   padding: 0;
-  background-image: linear-gradient(to bottom, var(--color-primary) 40%, var(--color-secondary) 100%);
+  background: $color-primary;
   width: 100vw;
   height: 100vh;
-  font-family: var(--font-family);
-  color: var(--color-invert-primary);
+  font-family: $font-family;
+  color: $color-invert-primary;
+  font-size: 14px;
+}
+
+body > div:first-child {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+}
+
+h1,h2,h3,h4,h5,h6,p,span {
+  margin: 0;
+  padding: 0;
 }

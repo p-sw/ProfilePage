@@ -6,7 +6,7 @@ import { useRouter } from 'next/router'
 function makeLink(router, {href, img, alt}) {
     return <Link href={href} className={ router.pathname === href ? styles.active : "" }>
         <div>
-            <Image src={img} alt={alt} width={30} height={30} />
+            <Image src={"/images/NavigationIcons/"+img} alt={alt} width={30} height={30} />
             <span>{alt}</span>
         </div>
     </Link>
@@ -16,29 +16,30 @@ function LinkMap() {
     return [
         {
             href: "/",
-            img: "/images/home.svg",
+            img: "home.svg",
             alt: "Home"
         },
         {
             href: "/apps",
-            img: "/images/apps.svg",
+            img: "apps.svg",
             alt: "Apps"
         },
         {
             href: "/about",
-            img: "/images/info.svg",
+            img: "info.svg",
             alt: "About"
         },
         {
             href: "/contact",
-            img: "/images/contact.svg",
+            img: "contact.svg",
             alt: "Contact"
+        },
+        {
+            href: "/conf",
+            img: "conf.svg",
+            alt: "Settings"
         }
     ]
-}
-
-function FindLinkIndex(router) {
-    return LinkMap().findIndex(link => link.href === router.pathname)
 }
 
 export default function Navigation() {
