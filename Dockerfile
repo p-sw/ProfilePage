@@ -1,17 +1,17 @@
 # NextJS Deploy
-FROM node:14.15.4-alpine3.12
+FROM node:19.3.0-alpine3.16
 
 WORKDIR /app
 
-COPY ./frontend/package*.json ./
+COPY ./frontend/package*.json /app
 
 RUN npm install
 
 # Bundle app source
-COPY ./frontend /app
-
-RUN chmod +x /app/docker-entrypoint.sh
+COPY ./frontend/ /app/
 
 EXPOSE 5000
 
-ENTRYPOINT ["/app/docker-entrypoint.sh"]
+RUN ["npm", "run", "build"]
+
+ENTRYPOINT ["npm", "run", "start"]
