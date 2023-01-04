@@ -3,12 +3,12 @@ FROM node:19.3.0-alpine3.16
 
 WORKDIR /app
 
-COPY ./frontend/package*.json /app
+COPY ./frontendts/package*.json /app
 
 RUN npm install
 
 # Bundle app source
-COPY ./frontend/ /app/
+COPY ./frontendts/ /app/
 
 EXPOSE 5000
 
