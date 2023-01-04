@@ -1,8 +1,6 @@
 import styles from "../styles/index.module.scss"
 import {CSSProperties} from "react";
 
-import "../component/LangGen";
-
 
 export default function index() {
   return <main className={styles.container}>
