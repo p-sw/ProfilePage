@@ -1,4 +1,4 @@
-import styles from "../styles/404.module.scss"
+import styles from "../styles/customerror.module.scss"
 
 export default function Custom404() {
     return <main className={styles.container}>

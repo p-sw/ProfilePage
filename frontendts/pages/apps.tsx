@@ -1,3 +1,7 @@
+import PageNotPrepared from "../component/PageNotPrepared";
+
 export default function apps() {
-    return <div>apps</div>
+    return <>
+        <PageNotPrepared />
+    </>
 }
