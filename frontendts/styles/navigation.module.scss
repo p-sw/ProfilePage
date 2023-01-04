@@ -92,8 +92,9 @@ $nav-lower-px: 50px;
             align-items: center;
             justify-content: center;
 
-            width: fit-content;
+            width: auto;
             height: fit-content;
+            aspect-ratio: auto 1/1;
 
             padding: 10px;
 
@@ -109,6 +110,9 @@ $nav-lower-px: 50px;
             font-weight: 700;
 
             position: absolute;
+            @include mini {
+              position: relative;
+            }
 
             opacity: 0;
 
@@ -119,6 +123,8 @@ $nav-lower-px: 50px;
             transition: 0.2s;
 
             @include mini {
+              position: absolute;
+
               width: 20px;
               height: 20px;
             }
