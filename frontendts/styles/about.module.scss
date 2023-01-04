@@ -1,5 +1,13 @@
 @import "../styles/variables.module";
 
+
+@mixin mini {
+  @media (max-width: 500px) {
+    @content;
+  }
+}
+
+
 .container {
   display: flex;
   flex-direction: column;
@@ -14,6 +22,8 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+
+    max-width: 80%;
 
     border-radius: 20px;
 

@@ -1,5 +1,11 @@
 @import "../styles/variables.module";
 
+@mixin mini {
+  @media (max-width: 500px) {
+    @content;
+  }
+}
+
 .skillbox {
   position: relative;
 
@@ -10,6 +16,11 @@
 
   width: 150px;
   height: 150px;
+
+  @include mini {
+    width: 90px;
+    height: 90px;
+  }
 
   border-radius: 20px;
 
@@ -50,6 +61,11 @@
 
     font-size: 1.5rem;
     font-weight: 500;
+
+    @include mini {
+      font-size: 1rem;
+      font-weight: 700;
+    }
 
     transition: $hover;
 

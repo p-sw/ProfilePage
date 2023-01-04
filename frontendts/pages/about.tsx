@@ -11,8 +11,8 @@ export default function about() {
                 <Image src="/images/prpic.png" alt="Profile Picture" width={2048} height={2048} />
             </article>
             <article className={styles.charinfo}>
-                <h1>SSerVe</h1>
-                <p>Korean High School Student & Full Stack Web Developer</p>
+                <h1>서브</h1>
+                <p>한국의 고등학생 & 풀스택 웹 개발자</p>
             </article>
         </section>
         <section className={styles.skills}>
