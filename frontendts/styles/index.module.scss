@@ -1,0 +1,158 @@
+@import './variables.module';
+
+main.container {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  section {
+    width: 50%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 0 8%;
+
+    &.hero {
+      justify-content: center;
+      align-items: flex-end;
+
+      h1,p {
+        opacity: 0;
+
+        word-break: keep-all;
+
+        text-align: right;
+      }
+
+      h1 {
+        font-size: 3.5rem;
+        font-weight: 1000;
+        color: $color-invert-primary;
+
+        animation: fadeIn 1s ease-in-out;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+      }
+      p {
+        font-size: 1.5rem;
+        font-weight: 500;
+        color: $color-invert-primary;
+
+        animation: fadeIn 1s ease-in-out 0.5s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+      }
+
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+    }
+
+    &.cube {
+      justify-content: center;
+      align-items: flex-start;
+
+      transform-style: preserve-3d;
+
+      & > div {
+        position: relative;
+
+        $cube-width: 100px;
+        $cube-height: 100px;
+        width: $cube-width;
+        height: $cube-height;
+
+        transform-style: preserve-3d;
+        transform: rotateX(-30deg);
+        animation: cubeRotate 4s linear infinite;
+
+        @keyframes cubeRotate {
+          0% {
+            transform: rotateX(-30deg) rotateY(0deg);
+          }
+          100% {
+            transform: rotateX(-30deg) rotateY(360deg);
+          }
+        }
+
+        $cube-color: mix($color-primary, $color-secondary, 40%);
+        $cube-hover-delay: 100ms;
+
+        & div:hover {
+          background: $color-secondary;
+
+          transition: background $cube-hover-delay linear;
+        }
+        & div.top:hover {
+          background: $color-secondary;
+
+          transition: background $cube-hover-delay linear;
+        }
+
+        & > div:not(.top) {
+          background: rgba(0, 0, 0, 0);
+
+          &:hover {
+            background: rgba(0, 0, 0, 0);
+          }
+        }
+
+        & > div {
+          position: absolute;
+
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+
+          transform-style: preserve-3d;
+
+          &.top {
+            position: absolute;
+
+            top: 0;
+            left: 0;
+            width: $cube-width;
+            height: $cube-height;
+
+            background-color: $cube-color;
+
+            border: 1px solid mix($color-primary, $color-secondary, 90%);
+
+            transition: background $cube-hover-delay linear;
+
+            transform: rotateX(90deg) translateZ($cube-height / 2);
+          }
+
+          & > div {
+            position: absolute;
+
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+
+            border: 1px solid mix($color-primary, $color-secondary, 90%);
+
+            background-color: $cube-color;
+
+            transition: background $cube-hover-delay linear;
+
+            transform: rotateY(calc(90deg * var(--i))) translateZ(calc($cube-width / 2));
+          }
+        }
+      }
+    }
+  }
+}

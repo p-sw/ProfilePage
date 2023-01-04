@@ -1,0 +1,95 @@
+@import "../styles/variables.module";
+
+.skillbox {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 150px;
+  height: 150px;
+
+  border-radius: 20px;
+
+  user-select: none;
+
+  &[data-def="false"] {
+    background-color: rgb(var(--r), var(--g), var(--b));
+  }
+
+  &[data-def="true"] {
+    background-color: $color-secondary;
+  }
+
+  $hover: 0.2s ease-out;
+
+  transition: $hover;
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+    width: 80%;
+    height: auto;
+
+    opacity: 1;
+
+    transition: $hover;
+  }
+
+  span {
+    position: absolute;
+
+    &[data-def="false"] {
+      color: rgb(var(--r), var(--g), var(--b));
+    }
+    &[data-def="true"] {
+      color: $color-invert-secondary;
+    }
+
+    font-size: 1.5rem;
+    font-weight: 500;
+
+    transition: $hover;
+
+    &.yesimg {
+      opacity: 0;
+    }
+    &.noimg {
+      opacity: 1;
+    }
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      transform: scale(1.05);
+
+      transition: $hover;
+
+      img {
+        opacity: 0;
+
+        transition: $hover;
+      }
+
+      span.yesimg {
+        opacity: 1;
+
+        transition: $hover;
+      }
+    }
+  }
+
+  @media (hover: none) {
+    span.yesimg {
+      position: relative;
+      opacity: 1;
+    }
+
+    img {
+      width: auto;
+      height: 50%;
+    }
+  }
+}

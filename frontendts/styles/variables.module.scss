@@ -1,0 +1,11 @@
+$color-primary: #fff;
+$color-invert-primary: #000;
+$color-primary-shadow: 0 0 12px 2px change-color($color-invert-primary, $alpha: 0.5);
+$color-secondary: #e6d1f2;
+$color-invert-secondary: #fff;
+$color-secondary-shadow: 0 0 12px 2px $color-secondary;
+$font-family: "Pretendard Variable", Pretendard, -apple-system,
+  BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue",
+  "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR",
+  "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji",
+  "Segoe UI Symbol", sans-serif;
