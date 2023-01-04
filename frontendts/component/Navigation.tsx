@@ -40,11 +40,6 @@ function LinkMap(): Array<NavigationProps> {
             img: "contact.svg",
             alt: "Contact"
         },
-        {
-            href: "conf",
-            img: "conf.svg",
-            alt: "Settings"
-        }
     ]
 }
 
