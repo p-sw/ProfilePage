@@ -10,16 +10,19 @@ type Lang = {
 
 function LangMap(lang: string): Lang {
   switch (lang) {
+
     case "en":
       return {
         "title": "Hello!",
         "subtitle": "I'm SSerVe, A Student-like Full Stack Web Developer."
       }
+
     case "kr":
       return {
         "title": "안녕하세요!",
         "subtitle": "학생이자 풀스택 웹 개발자인 서브입니다."
       }
+
     default:
       return {
         "title": "Hello!",
