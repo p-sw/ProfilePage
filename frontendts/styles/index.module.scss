@@ -60,9 +60,6 @@ main.container {
       p {
         font-size: 1.5rem;
         font-weight: 500;
-        @include mini {
-          font-size: 2rem;
-        }
 
         color: $color-invert-primary;
 

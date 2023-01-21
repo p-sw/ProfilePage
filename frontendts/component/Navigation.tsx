@@ -13,7 +13,6 @@ function makeLink(router: NextRouter, {href, img, alt}: NavigationProps) {
     return <Link href={"/"+href} className={ `${router.asPath === '/'+href ? styles.active : ""}` }>
         <div>
             <Image src={"/images/NavigationIcons/"+img} alt={alt} width={30} height={30} />
-            <span>{alt}</span>
         </div>
     </Link>
 }
