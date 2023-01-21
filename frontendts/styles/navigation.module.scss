@@ -49,7 +49,7 @@ $nav-lower-px: 50px;
     background-color: #fff;
 
     $nm_shadow: rgba(252, 252, 252, 0.5);
-    $sw_shadow: mix($nm_shadow, rgba(0, 0, 0, 0.5));
+    $sw_shadow: mix($nm_shadow, rgba(80, 80, 80, 0.5));
     box-shadow: -5px -5px 5px $nm_shadow, inset 5px 5px 10px $nm_shadow,
     5px 5px 5px $sw_shadow, inset -1px -1px 10px $sw_shadow;
 
