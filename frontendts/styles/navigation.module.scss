@@ -46,9 +46,12 @@ $nav-lower-px: 50px;
     border: none;
     border-radius: 15px;
 
-    background-color: $color-primary;
+    background-color: #fff;
 
-    box-shadow: $color-secondary-shadow;
+    $nm_shadow: rgba(252, 252, 252, 0.5);
+    $sw_shadow: mix($nm_shadow, rgba(0, 0, 0, 0.5));
+    box-shadow: -5px -5px 5px $nm_shadow, inset 5px 5px 10px $nm_shadow,
+    5px 5px 5px $sw_shadow, inset -1px -1px 10px $sw_shadow;
 
     ul {
       width: 100%;
@@ -78,6 +81,8 @@ $nav-lower-px: 50px;
         user-select: none;
 
         a {
+          $indicator-transition: 0.2s;
+
           text-decoration: none;
           color: black;
 
@@ -103,6 +108,11 @@ $nav-lower-px: 50px;
             }
 
             border-radius: 50%;
+
+            background-color: #fff;
+
+            box-shadow: 6px 6px 5px rgba(0, 0, 0, 0.5), -1px -1px 1px rgba(0, 0, 0, 0.1);
+            transition: $indicator-transition;
           }
 
           span {
@@ -132,14 +142,16 @@ $nav-lower-px: 50px;
 
           &.active {
             div {
-              background-color: $color-secondary;
+              box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+
+              transition: $indicator-transition;
             }
           }
 
           @media (hover: hover) {
             &:hover {
               img {
-                transform: translateY($nav-lower-px);
+                opacity: 0;
 
                 transition: 0.2s;
               }
