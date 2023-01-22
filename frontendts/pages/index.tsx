@@ -2,7 +2,7 @@ import styles from "../styles/index.module.scss"
 import {CSSProperties} from "react";
 
 
-export default function index() {
+export default function Index() {
   return <main className={styles.container}>
     <section className={styles.hero}>
       <h1>안녕하세요!</h1>

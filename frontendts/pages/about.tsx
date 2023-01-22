@@ -4,7 +4,7 @@ import SkillBox from "../component/SkillBox"
 
 import Image from "next/image"
 
-export default function about() {
+export default function About() {
     return <main className={styles.container}>
         <section className={styles.charbox}>
             <article className={styles.profilepic}>

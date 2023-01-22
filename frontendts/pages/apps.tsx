@@ -74,7 +74,7 @@ let projects: Array<Project> = [
     }
 ]
 
-export default function apps() {
+export default function Apps() {
     let [project, setProject] = useState<number>(0);
 
     function increaseProjectIndex() {
