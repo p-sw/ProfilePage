@@ -120,11 +120,18 @@ $nav-lower-px: 50px;
           img {
             transition: 0.2s;
 
+            width: 30px;
+            height: 30px;
+
+            transition: 0.2s;
+
             @include mini {
               position: absolute;
 
               width: 25px;
               height: 25px;
+
+              transition: 0.2s;
             }
           }
 
@@ -134,6 +141,20 @@ $nav-lower-px: 50px;
 
               transition: $indicator-transition;
             }
+
+            img {
+              width: 26px;
+              height: 26px;
+
+              transition: 0.2s;
+
+              @include mini {
+                width: 21px;
+                height: 21px;
+
+                transition: 0.2s;
+              }
+            }
           }
 
           @media (hover: hover) {
@@ -141,6 +162,20 @@ $nav-lower-px: 50px;
               div {
                 box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5), -1px -1px 1px rgba(0, 0, 0, 0.1);
                 transition: $indicator-transition;
+              }
+
+              img {
+                width: 28px;
+                height: 28px;
+
+                transition: 0.2s;
+
+                @include mini {
+                  width: 23px;
+                  height: 23px;
+
+                  transition: 0.2s;
+                }
               }
             }
           }
