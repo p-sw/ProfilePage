@@ -35,3 +35,4 @@ frontend/.env*.local
 frontend/.vercel
 
 google*
+.vscode/
