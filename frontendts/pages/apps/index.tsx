@@ -2,7 +2,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Router from "next/router";
 import styles from "../styles/apps.module.scss";
-import { getLayout } from "../layouts/DefaultLayout";
+import { getLayout } from "../../layouts/DefaultLayout";
 
 
 interface ProjectInteraction {
