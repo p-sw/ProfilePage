@@ -1,3 +1,4 @@
+import { getLayout } from "../layouts/DefaultLayout"
 import styles from "../styles/customerror.module.scss"
 
 export default function Custom404() {
@@ -6,3 +7,5 @@ export default function Custom404() {
         <p>요청한 페이지를 찾을 수 없습니다.</p>
     </main>
 }
+
+Custom404.getLayout = getLayout

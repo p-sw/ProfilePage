@@ -1,5 +1,6 @@
 import styles from "../styles/index.module.scss"
 import {CSSProperties} from "react";
+import { getLayout } from "../layouts/DefaultLayout";
 
 
 export default function Index() {
@@ -21,3 +22,5 @@ export default function Index() {
     </section>
   </main>
 }
+
+Index.getLayout = getLayout

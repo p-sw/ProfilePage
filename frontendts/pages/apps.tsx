@@ -2,6 +2,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Router from "next/router";
 import styles from "../styles/apps.module.scss";
+import { getLayout } from "../layouts/DefaultLayout";
 
 
 interface ProjectInteraction {
@@ -104,3 +105,6 @@ export default function Apps() {
         <button onClick={() => {increaseProjectIndex()}} className={project >= projects.length-1 ? styles.limit : ""}>Next</button>
     </main>
 }
+
+
+Apps.getLayout = getLayout

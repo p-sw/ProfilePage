@@ -3,6 +3,7 @@ import styles from "../styles/about.module.scss"
 import SkillBox from "../component/SkillBox"
 
 import Image from "next/image"
+import { getLayout } from "../layouts/DefaultLayout"
 
 export default function About() {
     return <main className={styles.container}>
@@ -66,3 +67,5 @@ export default function About() {
         </section>
     </main>
 }
+
+About.getLayout = getLayout
