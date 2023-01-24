@@ -1,5 +1,3 @@
-import type { AppProps } from 'next/app'
-
 import Head from 'next/head'
 
 import Navigation from "../component/Navigation"
@@ -16,6 +14,35 @@ export default function DefaultLayout(props: { children: React.ReactNode }) {
     </Head>
     <Navigation />
     {props.children}
+
+    <style jsx global>{`
+      @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css");
+      @import "./variables.module";
+
+      html,body {
+        margin: 0;
+        padding: 0;
+        background: $color-primary;
+        width: 100vw;
+        height: 100vh;
+        font-family: $font-family;
+        color: $color-invert-primary;
+        font-size: 14px;
+      }
+
+      body > div:first-child {
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        flex-direction: column;
+      }
+
+      h1,h2,h3,h4,h5,h6,p,span {
+        margin: 0;
+        padding: 0;
+      }
+    `}</style>
   </>
 }
 
