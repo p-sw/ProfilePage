@@ -2,16 +2,12 @@ import Layout from "../../../component/apps/muffinn/Layout"
 
 import {getLayout} from "../../../layouts/AppsLayout"
 
-export default function Muffinn() {
+export default function About() {
     return <Layout>
         <h1>
-            Muffinn
+            About
         </h1>
-
-        <style jsx>{`
-            
-        `}</style>        
     </Layout>
 }
 
-Muffinn.getLayout = getLayout
+About.getLayout = getLayout

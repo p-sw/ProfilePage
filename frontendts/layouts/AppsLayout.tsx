@@ -22,7 +22,7 @@ BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue",
         font-size: 14px;
       }
 
-      body > div:first-child {
+      div#__next {
         width: 100%;
         height: 100%;
 
