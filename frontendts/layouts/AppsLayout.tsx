@@ -13,7 +13,7 @@ export default function AppsLayout(props: { children: React.ReactNode }) {
         margin: 0;
         padding: 0;
         width: 100vw;
-        height: 100vh;
+        min-height: 100vh;
         font-family: "Pretendard Variable", Pretendard, -apple-system,
 BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue",
 "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR",
@@ -28,11 +28,6 @@ BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue",
 
         display: flex;
         flex-direction: column;
-      }
-
-      h1,h2,h3,h4,h5,h6,p,span {
-        margin: 0;
-        padding: 0;
       }
     `}</style>
   </>
