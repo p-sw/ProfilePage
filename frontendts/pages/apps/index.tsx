@@ -42,22 +42,6 @@ interface Project {
 
 let projects: Array<Project> = [
     {
-        title: "Certylang",
-        description: `Certylang은 파이썬의 단점을 보완하기 위해 만들어진 프로그래밍 언어입니다. 
-        기본적으로 파이썬과 비슷한 구조와 내장 함수, 
-        키워드를 가지고 있지만 파이썬의 단점을 보완하기 위해 추가된 키워드와 문법이 있으며, 
-        이를 통해 파이썬의 장점인 기존 라이브러리와 프레임워크들은 잃지 않으면서 단점을 최대한으로 메꿀 수 있도록 노력했습니다.`,
-        interaction: [
-            {
-                svgPath: "/images/InteractionIcons/github.svg",
-                text: "Github",
-                action: () => {
-                    Router.push("https://github.com/Project-Certylang/Certylang")
-                }
-            }
-        ]
-    },
-    {
         title: "Portfolio",
         description: `보고있는 바로 지금 이 웹사이트입니다. 
         TypeScript와 Next.JS를 사용해 만들었으며, 
